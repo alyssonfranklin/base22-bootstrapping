@@ -22,7 +22,7 @@ export default function Footer() {
     <footer className="footer-container">
       <div className="footer-main">
         <div className="footer-section newsletter-section">
-          <h3 className="footer-heading">Subscribe to our Newsletter and never miss what's new!</h3>
+          <h3 className="footer-heading">Subscribe to our Newsletter and never miss what&apos;s new!</h3>
           <form className="newsletter-form" onSubmit={handleSubmit}>
             <div className="newsletter-input-group">
               <input 
