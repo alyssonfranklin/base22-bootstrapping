@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect } from 'react';
-import { Metadata } from 'next';
 import Link from 'next/link';
 import { useNavigation } from '@/lib/context/NavigationContext';
 
@@ -125,12 +124,6 @@ const CATALOG_ITEMS = [
 const ALL_LABELS = Array.from(
   new Set(CATALOG_ITEMS.flatMap(item => item.labels))
 ).sort();
-
-// This would normally be in the layout.js file
-export const metadata = {
-  title: 'Catalog - Life & Career - HRX Portal',
-  description: 'Browse our catalog of life and career resources',
-};
 
 export default function CatalogPage() {
   const { setCurrentPage: setNavCurrentPage } = useNavigation();

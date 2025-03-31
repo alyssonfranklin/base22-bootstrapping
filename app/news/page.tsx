@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect } from 'react';
-import { Metadata } from 'next';
 import Link from 'next/link';
 import { useNavigation } from '@/lib/context/NavigationContext';
 
@@ -150,11 +149,6 @@ const NEWS_ITEMS = [
 const ALL_CATEGORIES = Array.from(
   new Set(NEWS_ITEMS.map(item => item.category))
 ).sort();
-
-export const metadata: Metadata = {
-  title: 'News Catalog - HRX Portal',
-  description: 'Browse our catalog of news and announcements',
-};
 
 export default function NewsPage() {
   const { setCurrentPage: setNavCurrentPage } = useNavigation();
