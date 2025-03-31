@@ -1,0 +1,47 @@
+[
+  {
+    "id": "event-1",
+    "title": "Quarterly Town Hall",
+    "description": "Join us for our quarterly town hall meeting where our CEO will share company updates, achievements, and plans for the upcoming quarter. There will be a Q&A session at the end.",
+    "startDate": "2025-04-15T13:00:00Z",
+    "endDate": "2025-04-15T15:00:00Z",
+    "location": "Main Auditorium",
+    "organizer": "Executive Office"
+  },
+  {
+    "id": "event-2",
+    "title": "Team Building Workshop",
+    "description": "A fun and interactive team building workshop designed to improve collaboration and communication across departments. Activities will include problem-solving exercises and team challenges.",
+    "startDate": "2025-04-20T09:00:00Z",
+    "endDate": "2025-04-20T16:00:00Z",
+    "location": "Conference Center, Rooms A & B",
+    "organizer": "Human Resources"
+  },
+  {
+    "id": "event-3",
+    "title": "New Employee Orientation",
+    "description": "Welcome session for all new employees joining this month. The orientation will cover company policies, benefits, culture, and provide an opportunity to meet key department representatives.",
+    "startDate": "2025-05-02T09:30:00Z",
+    "endDate": "2025-05-02T12:30:00Z",
+    "location": "Training Room 1",
+    "organizer": "Human Resources"
+  },
+  {
+    "id": "event-4",
+    "title": "Cybersecurity Awareness Training",
+    "description": "Mandatory training session on cybersecurity best practices. Topics include password security, recognizing phishing attempts, and protecting sensitive company information.",
+    "startDate": "2025-05-10T14:00:00Z",
+    "endDate": "2025-05-10T16:00:00Z",
+    "location": "Online Zoom Meeting",
+    "organizer": "IT Security Team"
+  },
+  {
+    "id": "event-5",
+    "title": "Summer Company Picnic",
+    "description": "Annual summer picnic for all employees and their families. Food, games, and entertainment will be provided. Activities for children will be available.",
+    "startDate": "2025-06-12T11:00:00Z",
+    "endDate": "2025-06-12T17:00:00Z",
+    "location": "Riverfront Park",
+    "organizer": "Employee Engagement Committee"
+  }
+]

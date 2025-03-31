@@ -1,0 +1,47 @@
+[
+  {
+    "id": "news-1",
+    "title": "Company Annual Meeting Announced",
+    "content": "The annual company meeting will be held on July 15th in the main conference hall. All employees are required to attend. The meeting will cover company performance, future plans, and recognition of outstanding employees.",
+    "author": "Sarah Johnson",
+    "date": "2025-02-28T09:00:00Z",
+    "category": "Announcements",
+    "featured": true
+  },
+  {
+    "id": "news-2",
+    "title": "New Health Benefits Package",
+    "content": "We are pleased to announce our enhanced health benefits package that will be effective from August 1st. The new package includes improved mental health coverage, additional wellness programs, and a new telemedicine option.",
+    "author": "Michael Chen",
+    "date": "2025-03-05T14:30:00Z",
+    "category": "Benefits",
+    "featured": true
+  },
+  {
+    "id": "news-3",
+    "title": "IT System Maintenance Scheduled",
+    "content": "The IT department will be performing system maintenance this weekend, from Saturday 8 PM to Sunday 2 AM. During this time, some systems may be unavailable or experience slowdowns. Please plan your work accordingly.",
+    "author": "David Wilson",
+    "date": "2025-03-10T11:15:00Z",
+    "category": "IT",
+    "featured": false
+  },
+  {
+    "id": "news-4",
+    "title": "New Product Launch Success",
+    "content": "Our new product line has exceeded first-quarter sales projections by 27%. This success is a testament to the hard work of our product development, marketing, and sales teams. A detailed report will be shared in next week's department meetings.",
+    "author": "Emily Rodriguez",
+    "date": "2025-03-15T10:45:00Z",
+    "category": "Business Updates",
+    "featured": true
+  },
+  {
+    "id": "news-5",
+    "title": "Office Renovation Update",
+    "content": "The third floor renovation project is now 75% complete and on schedule to be finished by the end of the month. The new collaborative spaces and meeting rooms will be available for use starting April 5th.",
+    "author": "James Thompson",
+    "date": "2025-03-20T15:00:00Z",
+    "category": "Facilities",
+    "featured": false
+  }
+]
