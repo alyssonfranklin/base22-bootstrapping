@@ -72,7 +72,7 @@ export default async function EventDetail({ params }: { params: { id: string } }
         <div className="quote-and-image">
           <div className="event-quote-container">
             <blockquote className="event-quote">
-              "Join us for this exciting event where we will share knowledge and connect with colleagues."
+              &ldquo;Join us for this exciting event where we will share knowledge and connect with colleagues.&rdquo;
               <cite className="quote-author">HRX Events Team</cite>
             </blockquote>
           </div>
