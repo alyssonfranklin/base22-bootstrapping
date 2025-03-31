@@ -1,6 +1,7 @@
 /* Import the CSS that provides styling for Radix UI components */
 @import '../styles/radix-ui.css';
 @import '../styles/globals.css';
+@import './landing-page.css';
 
 /* Mobile Navigation Styles */
 .mobile-menu-overlay {
