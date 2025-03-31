@@ -2,6 +2,9 @@
 @import '../styles/radix-ui.css';
 @import '../styles/globals.css';
 @import './landing-page.css';
+@import './catalog.css';
+@import './news.css';
+@import './article.css';
 
 /* Mobile Navigation Styles */
 .mobile-menu-overlay {

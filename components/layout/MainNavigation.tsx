@@ -28,6 +28,7 @@ const menuItems: MenuItem[] = [
       { title: 'Training', link: '/life-career/training' },
       { title: 'Development', link: '/life-career/development' },
       { title: 'Well-being', link: '/life-career/wellbeing' },
+      { title: 'Resource Catalog', link: '/catalog' },
     ],
   },
   {
@@ -52,6 +53,7 @@ const menuItems: MenuItem[] = [
     title: 'News Feed',
     link: '/news',
     items: [
+      { title: 'News Catalog', link: '/news' },
       { title: 'Announcements', link: '/news/announcements' },
       { title: 'Company Updates', link: '/news/updates' },
       { title: 'Events', link: '/news/events' },

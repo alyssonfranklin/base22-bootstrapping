@@ -6,162 +6,138 @@ import Link from 'next/link';
 import { useNavigation } from '@/lib/context/NavigationContext';
 
 // This would typically come from an API or CMS
-const NEWS_ITEMS = [
+const CATALOG_ITEMS = [
   {
-    id: "news-1",
-    title: "Password Management Updates",
-    description: "Learn about the company's new password policy and how to manage your credentials securely.",
-    image: "/images/news/security.jpg",
-    category: "IT",
-    date: "2025-03-20"
+    id: 1,
+    title: "Password Access and Credentials",
+    description: "Learn about the company's password policy and how to manage your credentials securely.",
+    image: "/images/catalog/password.jpg",
+    labels: ["IT", "Security"]
   },
   {
-    id: "news-2",
+    id: 2,
     title: "Remote Work Guidelines",
     description: "Comprehensive guide for working remotely, including best practices and communication tools.",
-    image: "/images/news/remote.jpg",
-    category: "HR",
-    date: "2025-03-18"
+    image: "/images/catalog/remote.jpg",
+    labels: ["HR", "Policy"]
   },
   {
-    id: "news-3",
-    title: "Benefits Overview 2025",
+    id: 3,
+    title: "Benefits Overview 2023",
     description: "Detailed information about your employee benefits package for the current year.",
-    image: "/images/news/benefits.jpg",
-    category: "Benefits",
-    date: "2025-03-15"
+    image: "/images/catalog/benefits.jpg",
+    labels: ["HR", "Benefits"]
   },
   {
-    id: "news-4",
+    id: 4,
     title: "Diversity and Inclusion Initiative",
     description: "Learn about our commitment to fostering a diverse and inclusive workplace environment.",
-    image: "/images/news/diversity.jpg",
-    category: "Culture",
-    date: "2025-03-12"
+    image: "/images/catalog/diversity.jpg",
+    labels: ["Culture", "HR"]
   },
   {
-    id: "news-5",
+    id: 5,
     title: "Annual Performance Review Process",
     description: "Step-by-step guide to preparing for and conducting your annual performance review.",
-    image: "/images/news/performance.jpg",
-    category: "HR",
-    date: "2025-03-10"
+    image: "/images/catalog/performance.jpg",
+    labels: ["HR", "Career"]
   },
   {
-    id: "news-6",
+    id: 6,
     title: "Company Travel Policy",
     description: "Guidelines for business travel, including expense reporting and approval processes.",
-    image: "/images/news/travel.jpg",
-    category: "Policy",
-    date: "2025-03-08"
+    image: "/images/catalog/travel.jpg",
+    labels: ["Policy", "Finance"]
   },
   {
-    id: "news-7",
+    id: 7,
     title: "Office Safety Procedures",
     description: "Important safety information and emergency procedures for all office locations.",
-    image: "/images/news/safety.jpg",
-    category: "Facilities",
-    date: "2025-03-05"
+    image: "/images/catalog/safety.jpg",
+    labels: ["Safety", "Facilities"]
   },
   {
-    id: "news-8",
-    title: "Leadership Development Program",
+    id: 8,
+    title: "Learning and Development Resources",
     description: "Explore available training programs and professional development opportunities.",
-    image: "/images/news/leadership.jpg",
-    category: "Training",
-    date: "2025-03-01"
+    image: "/images/catalog/learning.jpg",
+    labels: ["Training", "Career"]
   },
   {
-    id: "news-9",
-    title: "IT Support and Helpdesk Changes",
+    id: 9,
+    title: "IT Support and Helpdesk",
     description: "How to get technical support and troubleshooting assistance for company systems.",
-    image: "/images/news/support.jpg",
-    category: "IT",
-    date: "2025-02-28"
+    image: "/images/catalog/support.jpg",
+    labels: ["IT", "Support"]
   },
   {
-    id: "news-10",
+    id: 10,
     title: "Health and Wellness Programs",
     description: "Information about wellness initiatives and health resources available to employees.",
-    image: "/images/news/wellness.jpg",
-    category: "Benefits",
-    date: "2025-02-25"
+    image: "/images/catalog/wellness.jpg",
+    labels: ["Health", "Benefits"]
   },
   {
-    id: "news-11",
+    id: 11,
     title: "Project Management Guidelines",
     description: "Best practices for managing projects and collaborating effectively with teams.",
-    image: "/images/news/project.jpg",
-    category: "Productivity",
-    date: "2025-02-20"
+    image: "/images/catalog/project.jpg",
+    labels: ["Productivity", "Teams"]
   },
   {
-    id: "news-12",
-    title: "New Communication Channels",
+    id: 12,
+    title: "Internal Communication Channels",
     description: "Overview of communication tools and channels used within the organization.",
-    image: "/images/news/communication.jpg",
-    category: "Communication",
-    date: "2025-02-18"
+    image: "/images/catalog/communication.jpg",
+    labels: ["Communication", "Tools"]
   },
   {
-    id: "news-13",
+    id: 13,
     title: "Environmental Sustainability Efforts",
     description: "Learn about our company's initiatives to reduce environmental impact and promote sustainability.",
-    image: "/images/news/sustainability.jpg",
-    category: "Corporate",
-    date: "2025-02-15"
+    image: "/images/catalog/sustainability.jpg",
+    labels: ["Environment", "Corporate"]
   },
   {
-    id: "news-14",
+    id: 14,
     title: "Employee Recognition Program",
     description: "Information about how to recognize colleagues and the rewards program.",
-    image: "/images/news/recognition.jpg",
-    category: "Culture",
-    date: "2025-02-10"
+    image: "/images/catalog/recognition.jpg",
+    labels: ["Culture", "HR"]
   },
   {
-    id: "news-15",
-    title: "Code of Conduct Updates",
+    id: 15,
+    title: "Code of Conduct",
     description: "Guidelines for professional behavior and ethical standards expected from all employees.",
-    image: "/images/news/conduct.jpg",
-    category: "Policy",
-    date: "2025-02-05"
+    image: "/images/catalog/conduct.jpg",
+    labels: ["Policy", "Ethics"]
   },
   {
-    id: "news-16",
+    id: 16,
     title: "Retirement Planning Resources",
     description: "Tools and information to help you plan for retirement and manage your 401(k).",
-    image: "/images/news/retirement.jpg",
-    category: "Finance",
-    date: "2025-02-01"
+    image: "/images/catalog/retirement.jpg",
+    labels: ["Finance", "Benefits"]
   },
-  // Simulating more items to reach 42 total
-  ...Array.from({ length: 26 }).map((_, i) => ({
-    id: `news-${i + 17}`,
-    title: `Additional News Item ${i + 1}`,
-    description: "This is a placeholder for additional news items to demonstrate pagination functionality.",
-    image: "/images/news/placeholder.jpg",
-    category: i % 4 === 0 ? "IT" : i % 4 === 1 ? "HR" : i % 4 === 2 ? "Corporate" : "Benefits",
-    date: `2025-01-${30 - (i % 30)}`
-  }))
 ];
 
-// All unique categories from news items
-const ALL_CATEGORIES = Array.from(
-  new Set(NEWS_ITEMS.map(item => item.category))
+// All unique labels from catalog items
+const ALL_LABELS = Array.from(
+  new Set(CATALOG_ITEMS.flatMap(item => item.labels))
 ).sort();
 
-export const metadata: Metadata = {
-  title: 'News Catalog - HRX Portal',
-  description: 'Browse our catalog of news and announcements',
+// This would normally be in the layout.js file
+export const metadata = {
+  title: 'Catalog - Life & Career - HRX Portal',
+  description: 'Browse our catalog of life and career resources',
 };
 
-export default function NewsPage() {
+export default function CatalogPage() {
   const { setCurrentPage } = useNavigation();
   const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('');
+  const [selectedLabel, setSelectedLabel] = useState('');
   const [currentPage, setCurrentPage] = useState(1);
-  const [filteredItems, setFilteredItems] = useState(NEWS_ITEMS);
+  const [filteredItems, setFilteredItems] = useState(CATALOG_ITEMS);
   
   const itemsPerPage = 8;
   const totalPages = Math.ceil(filteredItems.length / itemsPerPage);
@@ -174,40 +150,34 @@ export default function NewsPage() {
       title: 'Life & Career',
       breadcrumbs: [
         { title: 'Home', href: '/' },
-        { title: 'Life & Career', href: '/news' }
+        { title: 'Life & Career', href: '/catalog' }
       ]
     });
   }, [setCurrentPage]);
   
-  // Filter items when search term or category changes
+  // Filter items when search term or label changes
   useEffect(() => {
-    const filtered = NEWS_ITEMS.filter(item => {
+    const filtered = CATALOG_ITEMS.filter(item => {
       const matchesSearch = searchTerm === '' || 
         item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
         item.description.toLowerCase().includes(searchTerm.toLowerCase());
       
-      const matchesCategory = selectedCategory === '' || 
-        item.category === selectedCategory;
+      const matchesLabel = selectedLabel === '' || 
+        item.labels.includes(selectedLabel);
       
-      return matchesSearch && matchesCategory;
+      return matchesSearch && matchesLabel;
     });
     
     setFilteredItems(filtered);
     setCurrentPage(1); // Reset to first page when filters change
-  }, [searchTerm, selectedCategory]);
-  
-  // Handle article click - in a real app, this would navigate to the article detail page
-  const handleArticleClick = (id: string) => {
-    // In a real app, this would use router.push
-    console.log(`Navigate to article: ${id}`);
-  };
+  }, [searchTerm, selectedLabel]);
   
   const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearchTerm(e.target.value);
   };
   
-  const handleCategoryChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    setSelectedCategory(e.target.value);
+  const handleLabelChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    setSelectedLabel(e.target.value);
   };
   
   const handlePageChange = (page: number) => {
@@ -244,16 +214,16 @@ export default function NewsPage() {
         </div>
         
         <div className="filter-group">
-          <label htmlFor="category-filter" className="filter-label">Label</label>
+          <label htmlFor="label-filter" className="filter-label">Label</label>
           <select
-            id="category-filter"
+            id="label-filter"
             className="filter-select"
-            value={selectedCategory}
-            onChange={handleCategoryChange}
+            value={selectedLabel}
+            onChange={handleLabelChange}
           >
             <option value="">All Labels</option>
-            {ALL_CATEGORIES.map(category => (
-              <option key={category} value={category}>{category}</option>
+            {ALL_LABELS.map(label => (
+              <option key={label} value={label}>{label}</option>
             ))}
           </select>
         </div>
@@ -266,7 +236,7 @@ export default function NewsPage() {
         
         <div className="catalog-grid">
           {currentItems.map(item => (
-            <Link href={`/news/${item.id}`} key={item.id} className="catalog-card">
+            <div key={item.id} className="catalog-card">
               <div className="catalog-card-image">
                 <div className="placeholder-image" aria-hidden="true"></div>
               </div>
@@ -274,11 +244,12 @@ export default function NewsPage() {
                 <h3 className="catalog-card-title">{item.title}</h3>
                 <p className="catalog-card-description">{item.description}</p>
                 <div className="catalog-card-labels">
-                  <span className="catalog-card-label">{item.category}</span>
-                  <span className="catalog-card-date">{new Date(item.date).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })}</span>
+                  {item.labels.map(label => (
+                    <span key={label} className="catalog-card-label">{label}</span>
+                  ))}
                 </div>
               </div>
-            </Link>
+            </div>
           ))}
         </div>
         

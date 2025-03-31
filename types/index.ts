@@ -17,6 +17,21 @@ export interface NewsItem {
   featured: boolean;
 }
 
+export interface ArticleDetail extends NewsItem {
+  heroImage?: string;
+  tags?: string[];
+  relatedArticles?: RelatedArticle[];
+  htmlContent?: string;
+}
+
+export interface RelatedArticle {
+  id: string;
+  title: string;
+  excerpt: string;
+  image?: string;
+  date: string;
+}
+
 export interface Event {
   id: string;
   title: string;

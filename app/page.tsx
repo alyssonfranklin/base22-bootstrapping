@@ -37,7 +37,7 @@ export default function Home() {
         <div className="section-header">
           <h2 className="section-title">Top News</h2>
           <Link href="/news" className="view-all-link">
-            VIEW ALL
+            VIEW ALL NEWS
           </Link>
         </div>
         <div className="top-news-grid">
@@ -143,7 +143,7 @@ export default function Home() {
         <div className="section-header">
           <h2 className="section-title">Other News</h2>
           <Link href="/news" className="view-all-link">
-            VIEW ALL
+            VIEW ALL NEWS
           </Link>
         </div>
         <ul className="other-news-list">
