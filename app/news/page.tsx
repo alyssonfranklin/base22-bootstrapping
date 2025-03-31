@@ -157,7 +157,7 @@ export const metadata: Metadata = {
 };
 
 export default function NewsPage() {
-  const { setCurrentPage } = useNavigation();
+  const { setCurrentPage: setNavCurrentPage } = useNavigation();
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('');
   const [currentPage, setCurrentPage] = useState(1);
@@ -170,14 +170,14 @@ export default function NewsPage() {
   
   // Update breadcrumb when component mounts
   useEffect(() => {
-    setCurrentPage({
+    setNavCurrentPage({
       title: 'Life & Career',
       breadcrumbs: [
         { title: 'Home', href: '/' },
         { title: 'Life & Career', href: '/news' }
       ]
     });
-  }, [setCurrentPage]);
+  }, [setNavCurrentPage]);
   
   // Filter items when search term or category changes
   useEffect(() => {

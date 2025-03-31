@@ -133,7 +133,7 @@ export const metadata = {
 };
 
 export default function CatalogPage() {
-  const { setCurrentPage } = useNavigation();
+  const { setCurrentPage: setNavCurrentPage } = useNavigation();
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedLabel, setSelectedLabel] = useState('');
   const [currentPage, setCurrentPage] = useState(1);
@@ -146,14 +146,14 @@ export default function CatalogPage() {
   
   // Update breadcrumb when component mounts
   useEffect(() => {
-    setCurrentPage({
+    setNavCurrentPage({
       title: 'Life & Career',
       breadcrumbs: [
         { title: 'Home', href: '/' },
         { title: 'Life & Career', href: '/catalog' }
       ]
     });
-  }, [setCurrentPage]);
+  }, [setNavCurrentPage]);
   
   // Filter items when search term or label changes
   useEffect(() => {

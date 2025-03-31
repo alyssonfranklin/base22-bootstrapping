@@ -71,7 +71,7 @@ const ARTICLE_DETAIL = {
 
 export default function ArticlePage() {
   const { id } = useParams();
-  const { setCurrentPage } = useNavigation();
+  const { setCurrentPage: setNavCurrentPage } = useNavigation();
   const [bookmarked, setBookmarked] = useState(false);
   
   // In a real application, we would fetch the article data based on the ID
@@ -80,7 +80,7 @@ export default function ArticlePage() {
   
   useEffect(() => {
     // Update breadcrumb when component mounts
-    setCurrentPage({
+    setNavCurrentPage({
       title: article.title,
       breadcrumbs: [
         { title: 'Home', href: '/' },
@@ -88,7 +88,7 @@ export default function ArticlePage() {
         { title: article.title, href: `/news/${article.id}` }
       ]
     });
-  }, [article, setCurrentPage]);
+  }, [article, setNavCurrentPage]);
   
   const toggleBookmark = () => {
     setBookmarked(!bookmarked);
