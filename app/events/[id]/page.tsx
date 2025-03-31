@@ -2,7 +2,8 @@ import React from 'react';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { Metadata } from 'next';
-import { getEventById, formatDate } from '@/lib/utils';
+import { getEventById } from '../actions';
+import { formatDate } from '@/lib/utils';
 
 export async function generateMetadata({ params }: { params: { id: string } }): Promise<Metadata> {
   const event = await getEventById(params.id);

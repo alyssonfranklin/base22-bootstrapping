@@ -1,6 +1,4 @@
 import { clsx, type ClassValue } from 'clsx';
-import fs from 'fs';
-import path from 'path';
 
 /**
  * Combines multiple class names into a single string using clsx
@@ -41,25 +39,5 @@ export function toTitleCase(str: string) {
   );
 }
 
-/**
- * Fetch events from JSON file
- */
-export async function getEvents() {
-  try {
-    const filePath = path.join(process.cwd(), 'data', 'events.json');
-    const fileContents = fs.readFileSync(filePath, 'utf8');
-    const events = JSON.parse(fileContents);
-    return events || [];
-  } catch (error) {
-    console.error('Error loading events:', error);
-    return [];
-  }
-}
-
-/**
- * Get event by ID
- */
-export async function getEventById(id: string) {
-  const events = await getEvents();
-  return events.find((event: any) => event.id === id) || null;
-}
+// Data fetching functions have been moved to lib/data.ts
+// This file only contains client-safe utility functions
