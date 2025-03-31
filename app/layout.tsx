@@ -2,14 +2,16 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import Header from '@/components/layout/Header';
 import MainNavigation from '@/components/layout/MainNavigation';
+import MobileNavigation from '@/components/layout/MobileNavigation';
 import Footer from '@/components/layout/Footer';
-import '@/styles/globals.css';
+import { NavigationProvider } from '@/lib/context/NavigationContext';
+import '@/app/globals.css';
 
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Organization Portal',
-  description: 'Horizontal portal intranet for our organization',
+  title: 'HRX Portal | North America',
+  description: 'Horizontal intranet portal for HRX North America',
 };
 
 export default function RootLayout({
@@ -20,14 +22,17 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className="app-container">
-          <Header />
-          <div className="main-content-wrapper">
-            <MainNavigation />
-            <main className="content-area">{children}</main>
+        <NavigationProvider>
+          <div className="app-container">
+            <Header />
+            <div className="main-content-wrapper">
+              <MainNavigation />
+              <main className="content-area">{children}</main>
+            </div>
+            <Footer />
+            <MobileNavigation />
           </div>
-          <Footer />
-        </div>
+        </NavigationProvider>
       </body>
     </html>
   );
