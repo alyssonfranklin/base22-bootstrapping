@@ -1,12 +1,40 @@
 [
   {
     "id": "event-1",
-    "title": "Quarterly Town Hall",
-    "description": "Join us for our quarterly town hall meeting where our CEO will share company updates, achievements, and plans for the upcoming quarter. There will be a Q&A session at the end.",
-    "startDate": "2025-04-15T13:00:00Z",
-    "endDate": "2025-04-15T15:00:00Z",
-    "location": "Main Auditorium",
-    "organizer": "Executive Office"
+    "title": "Annual Space Industries International Food & Wine Festival",
+    "description": "Join us for the most anticipated corporate event of the year, celebrating culinary excellence and fine wines from around the world. Space Industries International's annual Food & Wine Festival brings together renowned chefs, sommeliers, and food enthusiasts for a day of gastronomic delight. This exclusive event features cooking demonstrations, wine tasting sessions, and networking opportunities with industry leaders. Attendees will have the chance to sample innovative cuisine inspired by global culinary traditions while enjoying the spectacular views from our headquarters' rooftop venue.",
+    "startDate": "2025-07-15T13:00:00Z",
+    "endDate": "2025-07-15T20:00:00Z",
+    "location": "Space Industries International Headquarters, Rooftop Garden",
+    "organizer": "Space Industries Events Team",
+    "agenda": [
+      {
+        "time": "1:00 PM - 2:00 PM",
+        "activity": "Registration & Welcome Reception"
+      },
+      {
+        "time": "2:00 PM - 3:00 PM",
+        "activity": "Cooking Demonstration with Celebrity Chef Maria Ramirez"
+      },
+      {
+        "time": "3:00 PM - 4:30 PM",
+        "activity": "Wine Tasting: 'Exploring New World Wines' with Master Sommelier James Chen"
+      },
+      {
+        "time": "4:30 PM - 5:30 PM",
+        "activity": "Panel Discussion: 'The Future of Sustainable Gastronomy'"
+      },
+      {
+        "time": "5:30 PM - 7:00 PM",
+        "activity": "Main Course & Networking Dinner"
+      },
+      {
+        "time": "7:00 PM - 8:00 PM",
+        "activity": "Dessert Experience & Closing Remarks"
+      }
+    ],
+    "featuredQuote": "Space Industries International believes in celebrating innovation not just in technology, but in the culinary arts as well. Our annual festival represents our commitment to excellence in all domains.",
+    "quoteAuthor": "Dr. Eleanor Reeves, CEO of Space Industries International"
   },
   {
     "id": "event-2",
