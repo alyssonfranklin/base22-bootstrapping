@@ -1,6 +1,5 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { useEffect } from 'react';
 
 export const metadata: Metadata = {
   title: 'Home - HRX Portal | North America',
