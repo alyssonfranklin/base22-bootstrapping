@@ -40,7 +40,7 @@ export default function Footer() {
         
         <div className="footer-columns">
           <div className="footer-section company-section">
-            <div className="company-logo">BUNGE</div>
+            <div className="company-logo">HRX</div>
             <address className="company-address">
               1391 Timberlake Manor Parkway<br />
               Chesterfield, MO 63017<br />
@@ -73,12 +73,12 @@ export default function Footer() {
           </div>
           
           <div className="footer-section links-section">
-            <h4 className="footer-column-title">Everything Bunge</h4>
+            <h4 className="footer-column-title">Everything HRX</h4>
             <ul className="footer-links">
-              <li><Link href="/everything-bunge/global" className="footer-link">Global</Link></li>
-              <li><Link href="/everything-bunge/north-america" className="footer-link">North America</Link></li>
-              <li><Link href="/everything-bunge/south-america" className="footer-link">South America</Link></li>
-              <li><Link href="/everything-bunge/europe-asia" className="footer-link">Europe & Asia</Link></li>
+              <li><Link href="/everything-hrx/global" className="footer-link">Global</Link></li>
+              <li><Link href="/everything-hrx/north-america" className="footer-link">North America</Link></li>
+              <li><Link href="/everything-hrx/south-america" className="footer-link">South America</Link></li>
+              <li><Link href="/everything-hrx/europe-asia" className="footer-link">Europe & Asia</Link></li>
             </ul>
           </div>
         </div>
@@ -91,7 +91,7 @@ export default function Footer() {
           <Link href="/copyright" className="legal-link">Copyright</Link>
           <Link href="/ccpa" className="legal-link california-link">California Do Not Sell / Share My Personal Information</Link>
         </div>
-        <div className="copyright">Copyright © {currentYear} Bunge. All rights reserved.</div>
+        <div className="copyright">Copyright © {currentYear} HRX. All rights reserved.</div>
       </div>
     </footer>
   );
