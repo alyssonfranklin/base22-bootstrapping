@@ -1,0 +1,194 @@
+[
+  {
+    "id": "password-access",
+    "title": "Password Access and Credentials",
+    "description": "Guidelines for secure password creation, management, and access control for all organizational systems.",
+    "category": "IT Security",
+    "lastUpdated": "2025-02-15T10:30:00Z",
+    "featured": true
+  },
+  {
+    "id": "onboarding-process",
+    "title": "Employee Onboarding Process",
+    "description": "Comprehensive guide for new employee onboarding including necessary documentation, training requirements, and IT system access procedures.",
+    "category": "Human Resources",
+    "lastUpdated": "2025-01-12T09:15:00Z",
+    "featured": true
+  },
+  {
+    "id": "travel-policy",
+    "title": "Corporate Travel Policy",
+    "description": "Official guidelines for booking business travel, expense reporting, and travel safety protocols for domestic and international travel.",
+    "category": "Finance",
+    "lastUpdated": "2024-11-28T14:22:00Z",
+    "featured": false
+  },
+  {
+    "id": "data-management",
+    "title": "Data Management Guidelines",
+    "description": "Procedures for data retention, classification, and secure handling of organizational and client information assets.",
+    "category": "IT Security",
+    "lastUpdated": "2025-03-05T11:10:00Z",
+    "featured": false
+  },
+  {
+    "id": "procurement-guide",
+    "title": "Procurement Process Guide",
+    "description": "End-to-end workflow for procurement requests, vendor selection, contract negotiation, and purchasing approval processes.",
+    "category": "Finance",
+    "lastUpdated": "2025-01-05T16:45:00Z",
+    "featured": true
+  },
+  {
+    "id": "brand-guidelines",
+    "title": "Brand Guidelines and Assets",
+    "description": "Official brand guidelines including logo usage, corporate colors, typography, and templates for consistent communications.",
+    "category": "Marketing",
+    "lastUpdated": "2024-12-18T13:30:00Z",
+    "featured": true
+  },
+  {
+    "id": "benefits-overview",
+    "title": "Employee Benefits Overview",
+    "description": "Comprehensive information about health insurance, retirement plans, paid time off, and additional employee benefits.",
+    "category": "Human Resources",
+    "lastUpdated": "2025-02-28T09:00:00Z",
+    "featured": false
+  },
+  {
+    "id": "safety-procedures",
+    "title": "Workplace Safety Procedures",
+    "description": "Emergency protocols, incident reporting procedures, and safety guidelines for maintaining a secure workplace environment.",
+    "category": "Operations",
+    "lastUpdated": "2024-10-15T14:20:00Z",
+    "featured": false
+  },
+  {
+    "id": "code-of-conduct",
+    "title": "Code of Conduct",
+    "description": "Organizational ethics, professional conduct standards, and reporting mechanisms for compliance concerns.",
+    "category": "Legal",
+    "lastUpdated": "2025-01-30T10:15:00Z",
+    "featured": true
+  },
+  {
+    "id": "project-management",
+    "title": "Project Management Methodology",
+    "description": "Standard methodology, templates, and best practices for managing projects across the organization.",
+    "category": "Operations",
+    "lastUpdated": "2024-11-20T11:30:00Z",
+    "featured": false
+  },
+  {
+    "id": "remote-work-policy",
+    "title": "Remote Work Policy",
+    "description": "Guidelines for remote work eligibility, technology requirements, security protocols, and productivity expectations.",
+    "category": "Human Resources",
+    "lastUpdated": "2025-02-10T15:45:00Z",
+    "featured": true
+  },
+  {
+    "id": "expense-reporting",
+    "title": "Expense Reporting Guidelines",
+    "description": "Procedures for submitting, documenting, and approving business expenses including eligible expense categories and limits.",
+    "category": "Finance",
+    "lastUpdated": "2024-12-05T09:30:00Z",
+    "featured": false
+  },
+  {
+    "id": "performance-review",
+    "title": "Performance Review Process",
+    "description": "Annual performance evaluation framework including timeline, rating scales, and guidance for managers and employees.",
+    "category": "Human Resources",
+    "lastUpdated": "2025-03-01T11:20:00Z",
+    "featured": false
+  },
+  {
+    "id": "software-licenses",
+    "title": "Software Licensing Guide",
+    "description": "Processes for requesting, approving, and managing software licenses across the organization.",
+    "category": "IT Security",
+    "lastUpdated": "2024-11-10T14:00:00Z",
+    "featured": false
+  },
+  {
+    "id": "client-onboarding",
+    "title": "Client Onboarding Procedures",
+    "description": "Step-by-step process for client intake, documentation, account setup, and initial engagement management.",
+    "category": "Operations",
+    "lastUpdated": "2025-01-25T10:10:00Z",
+    "featured": true
+  },
+  {
+    "id": "marketing-calendar",
+    "title": "Marketing Campaign Calendar",
+    "description": "Centralized calendar of marketing initiatives, campaign schedules, and promotional event planning.",
+    "category": "Marketing",
+    "lastUpdated": "2025-02-20T16:30:00Z",
+    "featured": false
+  },
+  {
+    "id": "diversity-inclusion",
+    "title": "Diversity and Inclusion Initiatives",
+    "description": "Overview of organizational diversity programs, inclusion strategies, and resources for fostering an equitable workplace.",
+    "category": "Human Resources",
+    "lastUpdated": "2025-03-10T09:45:00Z",
+    "featured": true
+  },
+  {
+    "id": "cybersecurity-training",
+    "title": "Cybersecurity Awareness Training",
+    "description": "Required security training modules and resources for protecting organizational data and recognizing security threats.",
+    "category": "IT Security",
+    "lastUpdated": "2025-01-15T11:00:00Z",
+    "featured": false
+  },
+  {
+    "id": "meeting-guidelines",
+    "title": "Meeting Efficiency Guidelines",
+    "description": "Best practices for scheduling, conducting, and documenting effective meetings including templates and tools.",
+    "category": "Operations",
+    "lastUpdated": "2024-12-10T13:15:00Z",
+    "featured": false
+  },
+  {
+    "id": "data-privacy",
+    "title": "Data Privacy Standards",
+    "description": "Compliance requirements and procedures for handling personal data in accordance with relevant regulations.",
+    "category": "Legal",
+    "lastUpdated": "2025-02-05T14:30:00Z",
+    "featured": true
+  },
+  {
+    "id": "crisis-management",
+    "title": "Crisis Management Plan",
+    "description": "Protocols for responding to organizational crises including communication plans, emergency contacts, and response procedures.",
+    "category": "Operations",
+    "lastUpdated": "2024-11-05T10:20:00Z",
+    "featured": false
+  },
+  {
+    "id": "investment-policy",
+    "title": "Corporate Investment Policy",
+    "description": "Guidelines for managing corporate investments, cash reserves, and financial risk assessment.",
+    "category": "Finance",
+    "lastUpdated": "2025-01-20T09:30:00Z",
+    "featured": false
+  },
+  {
+    "id": "equity-compensation",
+    "title": "Equity Compensation Plan",
+    "description": "Details of stock options, restricted stock units, and other equity-based compensation programs for employees.",
+    "category": "Human Resources",
+    "lastUpdated": "2024-12-15T11:45:00Z",
+    "featured": false
+  },
+  {
+    "id": "content-strategy",
+    "title": "Content Marketing Strategy",
+    "description": "Framework for content creation, distribution channels, audience targeting, and performance metrics.",
+    "category": "Marketing",
+    "lastUpdated": "2025-03-15T15:00:00Z",
+    "featured": true
+  }
+]

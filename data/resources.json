@@ -1,0 +1,157 @@
+[
+  {
+    "id": "password-access",
+    "title": "Password Access and Credentials",
+    "description": "Guidelines for secure password creation, management, and access control for all organizational systems.",
+    "category": "IT Security",
+    "lastUpdated": "2025-02-15T10:30:00Z",
+    "featured": true,
+    "createdAt": "2024-10-15T09:00:00Z",
+    "updatedAt": "2025-02-15T10:30:00Z",
+    "relatedResources": ["cybersecurity-training", "data-management", "software-licenses"],
+    "documents": [
+      {
+        "id": "password-guidelines-doc",
+        "name": "Password Guidelines",
+        "description": "Comprehensive guidelines for creating and managing secure passwords.",
+        "size": "1.2 MB",
+        "format": "PDF",
+        "url": "/documents/password-guidelines.pdf",
+        "uploadedAt": "2025-01-20T14:30:00Z"
+      },
+      {
+        "id": "password-reset-doc",
+        "name": "Password Reset Procedure",
+        "description": "Step-by-step guide for resetting passwords across company systems.",
+        "size": "850 KB",
+        "format": "PDF",
+        "url": "/documents/password-reset-procedure.pdf",
+        "uploadedAt": "2025-01-22T11:15:00Z"
+      }
+    ]
+  },
+  {
+    "id": "onboarding-process",
+    "title": "Employee Onboarding Process",
+    "description": "Comprehensive guide for new employee onboarding including necessary documentation, training requirements, and IT system access procedures.",
+    "category": "Human Resources",
+    "lastUpdated": "2025-01-12T09:15:00Z",
+    "featured": true,
+    "createdAt": "2024-09-05T13:20:00Z",
+    "updatedAt": "2025-01-12T09:15:00Z",
+    "relatedResources": ["benefits-overview", "remote-work-policy", "password-access"],
+    "documents": [
+      {
+        "id": "onboarding-checklist-doc",
+        "name": "Onboarding Checklist",
+        "description": "Complete checklist for managers and new employees during the onboarding process.",
+        "size": "450 KB",
+        "format": "PDF",
+        "url": "/documents/onboarding-checklist.pdf",
+        "uploadedAt": "2025-01-05T10:00:00Z"
+      },
+      {
+        "id": "first-week-guide-doc",
+        "name": "First Week Guide",
+        "description": "Guide for new employees on what to expect during their first week.",
+        "size": "1.5 MB",
+        "format": "PDF",
+        "url": "/documents/first-week-guide.pdf",
+        "uploadedAt": "2025-01-05T10:05:00Z"
+      }
+    ]
+  },
+  {
+    "id": "travel-policy",
+    "title": "Corporate Travel Policy",
+    "description": "Official guidelines for booking business travel, expense reporting, and travel safety protocols for domestic and international travel.",
+    "category": "Finance",
+    "lastUpdated": "2024-11-28T14:22:00Z",
+    "featured": false,
+    "createdAt": "2024-07-18T11:30:00Z",
+    "updatedAt": "2024-11-28T14:22:00Z",
+    "relatedResources": ["expense-reporting", "procurement-guide"],
+    "documents": [
+      {
+        "id": "travel-policy-doc",
+        "name": "Corporate Travel Policy",
+        "description": "Complete policy document for all business travel.",
+        "size": "2.1 MB",
+        "format": "PDF",
+        "url": "/documents/corporate-travel-policy.pdf",
+        "uploadedAt": "2024-11-28T14:00:00Z"
+      },
+      {
+        "id": "travel-expense-template",
+        "name": "Travel Expense Template",
+        "description": "Excel template for submitting travel expenses.",
+        "size": "175 KB",
+        "format": "XLSX",
+        "url": "/documents/travel-expense-template.xlsx",
+        "uploadedAt": "2024-11-20T09:30:00Z"
+      }
+    ]
+  },
+  {
+    "id": "data-management",
+    "title": "Data Management Guidelines",
+    "description": "Procedures for data retention, classification, and secure handling of organizational and client information assets.",
+    "category": "IT Security",
+    "lastUpdated": "2025-03-05T11:10:00Z",
+    "featured": false,
+    "createdAt": "2024-08-12T15:45:00Z",
+    "updatedAt": "2025-03-05T11:10:00Z",
+    "relatedResources": ["data-privacy", "cybersecurity-training"],
+    "documents": [
+      {
+        "id": "data-classification-doc",
+        "name": "Data Classification Guide",
+        "description": "Guidelines for classifying data sensitivity levels.",
+        "size": "1.8 MB",
+        "format": "PDF",
+        "url": "/documents/data-classification-guide.pdf",
+        "uploadedAt": "2025-03-01T10:15:00Z"
+      },
+      {
+        "id": "data-retention-doc",
+        "name": "Data Retention Policy",
+        "description": "Policy for how long different types of data should be retained.",
+        "size": "950 KB",
+        "format": "PDF",
+        "url": "/documents/data-retention-policy.pdf",
+        "uploadedAt": "2025-03-03T14:22:00Z"
+      }
+    ]
+  },
+  {
+    "id": "procurement-guide",
+    "title": "Procurement Process Guide",
+    "description": "End-to-end workflow for procurement requests, vendor selection, contract negotiation, and purchasing approval processes.",
+    "category": "Finance",
+    "lastUpdated": "2025-01-05T16:45:00Z",
+    "featured": true,
+    "createdAt": "2024-06-30T09:15:00Z",
+    "updatedAt": "2025-01-05T16:45:00Z",
+    "relatedResources": ["travel-policy", "expense-reporting"],
+    "documents": [
+      {
+        "id": "procurement-workflow-doc",
+        "name": "Procurement Workflow",
+        "description": "Flowchart of the entire procurement process.",
+        "size": "2.4 MB",
+        "format": "PDF",
+        "url": "/documents/procurement-workflow.pdf",
+        "uploadedAt": "2025-01-02T11:30:00Z"
+      },
+      {
+        "id": "vendor-evaluation-doc",
+        "name": "Vendor Evaluation Template",
+        "description": "Template for evaluating potential vendors.",
+        "size": "350 KB",
+        "format": "XLSX",
+        "url": "/documents/vendor-evaluation-template.xlsx",
+        "uploadedAt": "2025-01-03T13:45:00Z"
+      }
+    ]
+  }
+]

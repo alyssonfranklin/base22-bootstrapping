@@ -7,6 +7,7 @@
 @import './article.css';
 @import './event-detail.css';
 @import './department.css';
+@import './directory.css';
 
 /* Mobile Navigation Styles */
 .mobile-menu-overlay {

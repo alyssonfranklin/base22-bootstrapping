@@ -1,0 +1,18 @@
+/* Directory Page Styles - Many styles are shared with catalog.css */
+
+.pagination-ellipsis {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  font-size: 0.875rem;
+  color: var(--text-light);
+  font-weight: bold;
+}
+
+@media (max-width: 576px) {
+  .pagination-ellipsis {
+    display: none;
+  }
+}
