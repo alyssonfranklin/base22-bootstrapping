@@ -107,6 +107,7 @@ export interface Resource extends BaseContentItem {
   featured: boolean;
   url?: string;
   relatedResources?: string[]; // IDs of related resources
+  documents?: DocumentDownload[]; // Associated documents
 }
 
 // Document content type for downloadable files
