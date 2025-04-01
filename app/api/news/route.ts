@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { getNews, getNewsById, getNewsByCategory, getFeaturedNews, filterAndPaginateData } from '@/lib/data.server';
+import { getNews, getNewsById, getNewsByCategory, getFeaturedNews } from '@/lib/data.server';
 import { FilterOptions } from '@/types';
 
 export async function GET(request: NextRequest) {
@@ -55,15 +55,9 @@ export async function GET(request: NextRequest) {
       filterOptions.tags = tags.split(',');
     }
     
-    // Get paginated and filtered news
-    const result = await filterAndPaginateData(
-      getNews,
-      filterOptions,
-      page,
-      pageSize
-    );
-    
-    return NextResponse.json(result);
+    // Get all news and return
+    const allNews = await getNews();
+    return NextResponse.json(allNews);
   } catch (error) {
     console.error('Error in news API route:', error);
     return NextResponse.json(

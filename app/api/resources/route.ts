@@ -5,8 +5,7 @@ import {
   getResourcesByCategory, 
   getFeaturedResources,
   getRelatedResources,
-  getResourceDocuments,
-  filterAndPaginateData 
+  getResourceDocuments
 } from '@/lib/data.server';
 import { FilterOptions } from '@/types';
 
@@ -71,15 +70,9 @@ export async function GET(request: NextRequest) {
       sortDirection: (searchParams.get('sortDirection') as any) || 'desc'
     };
     
-    // Get paginated and filtered resources
-    const result = await filterAndPaginateData(
-      getResources,
-      filterOptions,
-      page,
-      pageSize
-    );
-    
-    return NextResponse.json(result);
+    // Get all resources and return
+    const allResources = await getResources();
+    return NextResponse.json(allResources);
   } catch (error) {
     console.error('Error in resources API route:', error);
     return NextResponse.json(

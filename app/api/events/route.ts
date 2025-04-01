@@ -4,8 +4,7 @@ import {
   getEventById, 
   getUpcomingEvents, 
   getPastEvents,
-  getRelatedEvents,
-  filterAndPaginateData 
+  getRelatedEvents
 } from '@/lib/data.server';
 import { FilterOptions } from '@/types';
 
@@ -63,15 +62,9 @@ export async function GET(request: NextRequest) {
       sortDirection: (searchParams.get('sortDirection') as any) || 'desc'
     };
     
-    // Get paginated and filtered events
-    const result = await filterAndPaginateData(
-      getEvents,
-      filterOptions,
-      page,
-      pageSize
-    );
-    
-    return NextResponse.json(result);
+    // Get all events and return
+    const allEvents = await getEvents();
+    return NextResponse.json(allEvents);
   } catch (error) {
     console.error('Error in events API route:', error);
     return NextResponse.json(
