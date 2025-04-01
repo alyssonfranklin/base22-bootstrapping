@@ -383,6 +383,7 @@ export const DataProvider = ({ children }: { children: ReactNode }) => {
   // Initial data load
   useEffect(() => {
     refreshData();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   
   // Combine all values and functions to provide

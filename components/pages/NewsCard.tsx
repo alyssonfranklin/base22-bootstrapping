@@ -1,9 +1,9 @@
 import Card from '@/components/ui/Card';
-import { NewsItem } from '@/types';
+import { NewsArticle } from '@/types';
 import { formatDate, truncateText } from '@/lib/utils';
 
 interface NewsCardProps {
-  news: NewsItem;
+  news: NewsArticle;
   showFullContent?: boolean;
 }
 
