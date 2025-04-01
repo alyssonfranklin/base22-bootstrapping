@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Image, { ImageProps, PlaceholderValue } from 'next/image';
+import Image from 'next/image';
 import { clsx } from 'clsx';
 
 interface OptimizedImageProps {
@@ -13,7 +13,7 @@ interface OptimizedImageProps {
   quality?: number;
   objectFit?: 'cover' | 'contain' | 'fill' | 'none' | 'scale-down';
   objectPosition?: string;
-  placeholder?: PlaceholderValue;
+  placeholder?: 'blur' | false;
   blurDataURL?: string;
   fallback?: React.ReactNode;
   sizes?: string;
@@ -33,7 +33,7 @@ export default function OptimizedImage({
   quality = 75,
   objectFit = 'cover',
   objectPosition = 'center',
-  placeholder = 'empty',
+  placeholder,
   blurDataURL,
   fallback,
   sizes = '100vw',
@@ -98,11 +98,23 @@ export default function OptimizedImage({
     25vw
   `;
 
-  // Determine if placeholder should be provided
-  const placeholderProp = placeholder === 'blur' ? { 
-    placeholder: placeholder as PlaceholderValue,
-    blurDataURL: blurDataURL || 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg=='
-  } : { placeholder: 'empty' as PlaceholderValue };
+  // Create image props for the next/image component without alt (we'll add it separately)
+  const imageProps = {
+    src,
+    width: !fill ? width : undefined,
+    height: !fill ? height : undefined,
+    fill,
+    quality,
+    priority,
+    sizes: responsiveSizes,
+    onError: () => setError(true),
+    loading: loading || (priority ? 'eager' : 'lazy'),
+    style: {
+      objectFit,
+      objectPosition,
+    },
+    ...props
+  };
 
   return (
     <div
@@ -118,22 +130,12 @@ export default function OptimizedImage({
       }}
     >
       <Image
-        src={src}
         alt={alt}
-        width={!fill ? width : undefined}
-        height={!fill ? height : undefined}
-        fill={fill}
-        quality={quality}
-        priority={priority}
-        sizes={responsiveSizes}
-        onError={() => setError(true)}
-        loading={loading || (priority ? 'eager' : 'lazy')}
-        style={{
-          objectFit,
-          objectPosition,
-        }}
-        {...placeholderProp}
-        {...props}
+        {...imageProps}
+        {...(placeholder === 'blur' ? {
+          placeholder: 'blur',
+          blurDataURL: blurDataURL || 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg=='
+        } : {})}
       />
     </div>
   );
