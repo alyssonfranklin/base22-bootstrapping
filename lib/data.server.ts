@@ -305,8 +305,23 @@ export async function searchContent(query: string, limit: number = 10): Promise<
       if (!aTitleMatch && bTitleMatch) return 1;
       
       // If both or neither have title matches, sort by date
-      const aDate = new Date(a.date || a.publishedAt || a.updatedAt || a.lastUpdated || a.startDate);
-      const bDate = new Date(b.date || b.publishedAt || b.updatedAt || b.lastUpdated || b.startDate);
+      // Use type-safe date extraction with optional chaining and nullish coalescing
+      const getItemDate = (item: any): Date => {
+        // Try to get any valid date property in a type-safe way
+        const dateStr = 
+          (item as any).date || 
+          (item as any).publishedAt || 
+          (item as any).updatedAt || 
+          (item as any).lastUpdated || 
+          (item as any).startDate || 
+          (item as any).createdAt || 
+          new Date().toISOString(); // Default to current date if none found
+        
+        return new Date(dateStr);
+      };
+      
+      const aDate = getItemDate(a);
+      const bDate = getItemDate(b);
       
       return bDate.getTime() - aDate.getTime();
     })
@@ -351,15 +366,35 @@ export async function filterAndPaginateData<T extends Record<string, any>>(
     }
     
     // Date range filter
+    const getItemDate = (item: any, preferEndDate = false): Date => {
+      // Try to get any valid date property in a type-safe way
+      let dateStr;
+      
+      if (preferEndDate && (item as any).endDate) {
+        dateStr = (item as any).endDate;
+      } else {
+        dateStr = 
+          (item as any).date || 
+          (item as any).startDate || 
+          (item as any).publishedAt || 
+          (item as any).updatedAt || 
+          (item as any).createdAt ||
+          (item as any).lastUpdated ||
+          new Date().toISOString(); // Default to current date if none found
+      }
+      
+      return new Date(dateStr);
+    };
+    
     if (options.startDate) {
       const startDate = new Date(options.startDate);
-      const itemDate = new Date(item.date || item.startDate || item.publishedAt || item.updatedAt || item.createdAt);
+      const itemDate = getItemDate(item);
       if (itemDate < startDate) return false;
     }
     
     if (options.endDate) {
       const endDate = new Date(options.endDate);
-      const itemDate = new Date(item.date || item.endDate || item.publishedAt || item.updatedAt || item.createdAt);
+      const itemDate = getItemDate(item, true); // Prefer end date for end range checks
       if (itemDate > endDate) return false;
     }
     
@@ -380,15 +415,30 @@ export async function filterAndPaginateData<T extends Record<string, any>>(
   const sortedData = [...filtered].sort((a, b) => {
     const sortDirection = options.sortDirection === 'desc' ? -1 : 1;
     
+    // Helper function to safely get a date from an item
+    const getItemDate = (item: any): Date => {
+      // Try to get any valid date property in a type-safe way
+      const dateStr = 
+        (item as any).date || 
+        (item as any).publishedAt || 
+        (item as any).updatedAt || 
+        (item as any).createdAt || 
+        (item as any).lastUpdated || 
+        (item as any).startDate || 
+        new Date().toISOString(); // Default to current date if none found
+      
+      return new Date(dateStr);
+    };
+    
     switch (options.sortBy) {
       case 'newest':
-        const aDate = new Date(a.date || a.publishedAt || a.updatedAt || a.createdAt || a.lastUpdated);
-        const bDate = new Date(b.date || b.publishedAt || b.updatedAt || b.createdAt || b.lastUpdated);
+        const aDate = getItemDate(a);
+        const bDate = getItemDate(b);
         return sortDirection * (bDate.getTime() - aDate.getTime());
         
       case 'oldest':
-        const aDateOld = new Date(a.date || a.publishedAt || a.updatedAt || a.createdAt || a.lastUpdated);
-        const bDateOld = new Date(b.date || b.publishedAt || b.updatedAt || b.createdAt || b.lastUpdated);
+        const aDateOld = getItemDate(a);
+        const bDateOld = getItemDate(b);
         return sortDirection * (aDateOld.getTime() - bDateOld.getTime());
         
       case 'alphabetical':
