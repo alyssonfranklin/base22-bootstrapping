@@ -7,7 +7,7 @@ import { getDirectoryItems, getAllCategories } from './actions';
 import { formatDate } from '@/lib/utils';
 
 export default function DirectoryPage() {
-  const { setCurrentPage } = useNavigation();
+  const { setCurrentPage: setNavCurrentPage } = useNavigation();
   const [directoryItems, setDirectoryItems] = useState<any[]>([]);
   const [filteredItems, setFilteredItems] = useState<any[]>([]);
   const [categories, setCategories] = useState<string[]>([]);
@@ -24,14 +24,14 @@ export default function DirectoryPage() {
   
   // Set breadcrumbs
   useEffect(() => {
-    setCurrentPage({
+    setNavCurrentPage({
       title: 'Resource Directory',
       breadcrumbs: [
         { title: 'Home', href: '/' },
         { title: 'Directory', href: '/directory' }
       ]
     });
-  }, [setCurrentPage]);
+  }, [setNavCurrentPage]);
   
   // Load directory data
   useEffect(() => {
