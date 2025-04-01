@@ -7,19 +7,19 @@ import { getDepartments } from './actions';
 import { useNavigation } from '@/lib/context/NavigationContext';
 
 export default function DepartmentsPage() {
-  const { setNavCurrentPage } = useNavigation();
+  const { setCurrentPage } = useNavigation();
   const [departments, setDepartments] = React.useState<any[]>([]);
   const [isLoading, setIsLoading] = React.useState(true);
 
   useEffect(() => {
-    setNavCurrentPage({
+    setCurrentPage({
       title: 'Departments',
       breadcrumbs: [
         { title: 'Home', href: '/' },
         { title: 'Departments', href: '/departments' }
       ]
     });
-  }, [setNavCurrentPage]);
+  }, [setCurrentPage]);
 
   useEffect(() => {
     async function loadDepartments() {
