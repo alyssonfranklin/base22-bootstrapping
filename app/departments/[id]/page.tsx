@@ -10,7 +10,7 @@ import { formatDate } from '@/lib/utils';
 
 export default function DepartmentDetail() {
   const params = useParams();
-  const { setNavCurrentPage } = useNavigation();
+  const { setCurrentPage } = useNavigation();
   const [department, setDepartment] = useState<any>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [openAccordionItems, setOpenAccordionItems] = useState<string[]>(['0']); // First item open by default
@@ -24,7 +24,7 @@ export default function DepartmentDetail() {
         setIsLoading(false);
 
         if (data) {
-          setNavCurrentPage({
+          setCurrentPage({
             title: data.title,
             breadcrumbs: [
               { title: 'Home', href: '/' },
@@ -40,7 +40,7 @@ export default function DepartmentDetail() {
     }
 
     loadDepartment();
-  }, [params.id, setNavCurrentPage]);
+  }, [params.id, setCurrentPage]);
 
   const toggleAccordionItem = (itemId: string) => {
     setOpenAccordionItems((prev) => 
