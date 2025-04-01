@@ -30,7 +30,7 @@ export default function MobileNavigation() {
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
     // Search functionality would go here
-    alert(`Searching for: ${searchQuery}`);
+    console.log(`Searching for: ${searchQuery}`);
     closeMobileMenu();
   };
 
@@ -59,6 +59,7 @@ export default function MobileNavigation() {
         { title: 'Training', link: '/life-career/training' },
         { title: 'Development', link: '/life-career/development' },
         { title: 'Well-being', link: '/life-career/wellbeing' },
+        { title: 'Resource Catalog', link: '/catalog' },
       ],
     },
     {

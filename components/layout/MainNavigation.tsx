@@ -111,70 +111,70 @@ export default function MainNavigation() {
   }, [activeSection, setActiveSection]);
   
   return (
-    <nav className="main-navigation-container" aria-label="Main navigation">
-      <Link href="#main-content" className="skip-to-content">Skip to main content</Link>
-      
-      <div className="main-navigation" ref={navRef}>
-        <NavigationMenu.Root orientation="horizontal" className="nav-root">
-          <NavigationMenu.List className="nav-list-horizontal">
-            {menuItems.map((item) => (
-              <NavigationMenu.Item key={item.title} className="nav-item-horizontal">
-                {item.items ? (
-                  <DropdownMenu.Root open={activeSection === item.title} onOpenChange={() => handleMenuToggle(item.title)}>
-                    <DropdownMenu.Trigger 
-                      className="nav-dropdown-trigger focus-ring"
-                      aria-expanded={activeSection === item.title}
-                      aria-haspopup="true"
-                      onKeyDown={(e) => handleKeyDown(e, item.title)}
-                    >
+    <div>
+      <nav className="main-navigation-container" aria-label="Main navigation">
+        <div className="main-navigation" ref={navRef}>
+          <NavigationMenu.Root orientation="horizontal" className="nav-root">
+            <NavigationMenu.List className="nav-list-horizontal">
+              {menuItems.map((item) => (
+                <NavigationMenu.Item key={item.title} className="nav-item-horizontal">
+                  {item.items ? (
+                    <DropdownMenu.Root open={activeSection === item.title} onOpenChange={() => handleMenuToggle(item.title)}>
+                      <DropdownMenu.Trigger 
+                        className="nav-dropdown-trigger focus-ring"
+                        aria-expanded={activeSection === item.title}
+                        aria-haspopup="true"
+                        onKeyDown={(e) => handleKeyDown(e, item.title)}
+                      >
+                        {item.title}
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          className={`dropdown-arrow ${activeSection === item.title ? 'open' : ''}`}
+                          aria-hidden="true"
+                        >
+                          <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                      </DropdownMenu.Trigger>
+                      
+                      <DropdownMenu.Portal>
+                        <DropdownMenu.Content 
+                          className="nav-dropdown-content" 
+                          sideOffset={4}
+                          aria-label={`${item.title} submenu`}
+                        >
+                          {item.items.map((subItem) => (
+                            <DropdownMenu.Item key={subItem.title} className="nav-dropdown-item">
+                              <Link 
+                                href={subItem.link} 
+                                className="focus-ring"
+                                onClick={() => setActiveSection(null)}
+                              >
+                                {subItem.title}
+                              </Link>
+                            </DropdownMenu.Item>
+                          ))}
+                        </DropdownMenu.Content>
+                      </DropdownMenu.Portal>
+                    </DropdownMenu.Root>
+                  ) : (
+                    <Link href={item.link || '/'} className="nav-link-horizontal focus-ring">
                       {item.title}
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="16"
-                        height="16"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        className={`dropdown-arrow ${activeSection === item.title ? 'open' : ''}`}
-                        aria-hidden="true"
-                      >
-                        <polyline points="6 9 12 15 18 9"></polyline>
-                      </svg>
-                    </DropdownMenu.Trigger>
-                    
-                    <DropdownMenu.Portal>
-                      <DropdownMenu.Content 
-                        className="nav-dropdown-content" 
-                        sideOffset={4}
-                        aria-label={`${item.title} submenu`}
-                      >
-                        {item.items.map((subItem) => (
-                          <DropdownMenu.Item key={subItem.title} className="nav-dropdown-item">
-                            <Link 
-                              href={subItem.link} 
-                              className="focus-ring"
-                              onClick={() => setActiveSection(null)}
-                            >
-                              {subItem.title}
-                            </Link>
-                          </DropdownMenu.Item>
-                        ))}
-                      </DropdownMenu.Content>
-                    </DropdownMenu.Portal>
-                  </DropdownMenu.Root>
-                ) : (
-                  <Link href={item.link || '/'} className="nav-link-horizontal focus-ring">
-                    {item.title}
-                  </Link>
-                )}
-              </NavigationMenu.Item>
-            ))}
-          </NavigationMenu.List>
-        </NavigationMenu.Root>
-      </div>
+                    </Link>
+                  )}
+                </NavigationMenu.Item>
+              ))}
+            </NavigationMenu.List>
+          </NavigationMenu.Root>
+        </div>
+      </nav>
       
       <nav className="breadcrumb-container" aria-label="Breadcrumb navigation">
         <div className="breadcrumbs">
@@ -192,6 +192,6 @@ export default function MainNavigation() {
           ))}
         </div>
       </nav>
-    </nav>
+    </div>
   );
 }
