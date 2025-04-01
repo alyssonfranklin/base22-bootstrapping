@@ -187,14 +187,14 @@ export function getRelatedItems<T extends Record<string, any>>(
     
     // Matching tags
     if (currentItem.tags && item.tags) {
-      const matchingTags = currentItem.tags.filter(tag => item.tags.includes(tag));
+      const matchingTags = currentItem.tags.filter((tag: string) => item.tags.includes(tag));
       score += matchingTags.length;
     }
     
     // Title keyword matching
     if (currentItem.title && item.title) {
       const words = currentItem.title.toLowerCase().split(/\s+/);
-      words.forEach(word => {
+      words.forEach((word: string) => {
         if (word.length > 3 && item.title.toLowerCase().includes(word)) {
           score += 1;
         }
