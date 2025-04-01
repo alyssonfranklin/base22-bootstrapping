@@ -3,7 +3,7 @@ import { clsx } from 'clsx';
 import Link from 'next/link';
 
 // Enhanced Button Props with better type safety and accessibility
-interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+interface ButtonProps extends Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'onClick'> {
   children: ReactNode;
   className?: string;
   variant?: 'primary' | 'secondary' | 'outline' | 'text' | 'danger';
@@ -15,6 +15,8 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   href?: string;
   target?: string;
   rel?: string;
+  // Event handlers
+  onClick?: React.MouseEventHandler<HTMLButtonElement | HTMLAnchorElement>;
   // Accessibility props
   ariaLabel?: string;
   ariaDescribedby?: string;

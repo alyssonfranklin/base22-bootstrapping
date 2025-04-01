@@ -112,7 +112,6 @@ export default function Header() {
             role="search" 
             onSubmit={handleSearch}
             className="search-form"
-            aria-expanded={searchOpen}
           >
             <label htmlFor="site-search" className="sr-only">
               Search this site
