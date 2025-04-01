@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Image from 'next/image';
+import Image, { ImageProps, PlaceholderValue } from 'next/image';
 import { clsx } from 'clsx';
 
 interface OptimizedImageProps {
@@ -13,7 +13,7 @@ interface OptimizedImageProps {
   quality?: number;
   objectFit?: 'cover' | 'contain' | 'fill' | 'none' | 'scale-down';
   objectPosition?: string;
-  placeholder?: 'blur' | 'empty';
+  placeholder?: PlaceholderValue;
   blurDataURL?: string;
   fallback?: React.ReactNode;
   sizes?: string;
@@ -100,9 +100,9 @@ export default function OptimizedImage({
 
   // Determine if placeholder should be provided
   const placeholderProp = placeholder === 'blur' ? { 
-    placeholder,
+    placeholder: placeholder as PlaceholderValue,
     blurDataURL: blurDataURL || 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg=='
-  } : { placeholder: 'empty' };
+  } : { placeholder: 'empty' as PlaceholderValue };
 
   return (
     <div
