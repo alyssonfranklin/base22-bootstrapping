@@ -1,0 +1,288 @@
+/* Design System CSS Variables and Standardized Components 
+-------------------------------------------------------------- */
+
+/* Breakpoints Reference (not CSS variables, just for reference)
+---------------------------
+- xs: 0 - 575px (default mobile)
+- sm: 576px - 767px (large mobile, small tablet)
+- md: 768px - 991px (tablet)
+- lg: 992px - 1199px (desktop)
+- xl: 1200px+ (large desktop)
+*/
+
+:root {
+  /* Typography
+  ------------------------------- */
+  --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  
+  /* Font sizes with responsive scale - clamp(mobile, viewport-scaling, desktop) */
+  --text-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem); /* 12-14px */
+  --text-sm: clamp(0.875rem, 0.8rem + 0.25vw, 1rem);    /* 14-16px */
+  --text-md: clamp(1rem, 0.9rem + 0.5vw, 1.125rem);     /* 16-18px */
+  --text-lg: clamp(1.125rem, 1rem + 0.5vw, 1.25rem);    /* 18-20px */
+  --text-xl: clamp(1.25rem, 1.15rem + 0.5vw, 1.5rem);   /* 20-24px */
+  --text-2xl: clamp(1.5rem, 1.3rem + 1vw, 1.875rem);    /* 24-30px */
+  --text-3xl: clamp(1.875rem, 1.5rem + 1.5vw, 2.25rem); /* 30-36px */
+  --text-4xl: clamp(2.25rem, 1.75rem + 2vw, 3rem);      /* 36-48px */
+  
+  --line-height-tight: 1.2;
+  --line-height-normal: 1.5;
+  --line-height-loose: 1.8;
+  
+  /* Spacing System with consistent scaling
+  ------------------------------- */
+  --spacing-unit: 0.25rem; /* 4px base unit */
+  --spacing-2xs: calc(var(--spacing-unit) * 1); /* 4px */
+  --spacing-xs: calc(var(--spacing-unit) * 2);  /* 8px */
+  --spacing-sm: calc(var(--spacing-unit) * 3);  /* 12px */
+  --spacing-md: calc(var(--spacing-unit) * 4);  /* 16px */
+  --spacing-lg: calc(var(--spacing-unit) * 6);  /* 24px */
+  --spacing-xl: calc(var(--spacing-unit) * 8);  /* 32px */
+  --spacing-2xl: calc(var(--spacing-unit) * 12); /* 48px */
+  --spacing-3xl: calc(var(--spacing-unit) * 16); /* 64px */
+  --spacing-4xl: calc(var(--spacing-unit) * 20); /* 80px */
+  
+  /* Container widths
+  ------------------------------- */
+  --container-sm: 540px;
+  --container-md: 720px;
+  --container-lg: 960px;
+  --container-xl: 1140px;
+  --container-max: 1320px;
+  
+  /* Color System - Use existing color variables but add accessibility helpers
+  ------------------------------- */
+  /* Added high-contrast alternatives to ensure WCAG compliance */
+  --text-light-accessible: #666666; /* Original light text */
+  --text-light-high-contrast: #545454; /* Enhanced contrast for a11y */
+  
+  /* Border System
+  ------------------------------- */
+  --border-radius-2xs: 2px;
+  --border-radius-xs: 4px;
+  --border-radius-sm: 6px;
+  --border-radius-md: 8px;
+  --border-radius-lg: 12px;
+  --border-radius-xl: 16px;
+  --border-radius-full: 9999px;
+
+  /* Animation System
+  ------------------------------- */
+  --transition-fast: 150ms;
+  --transition-normal: 250ms;
+  --transition-slow: 350ms;
+  --transition-very-slow: 500ms;
+  
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-in: cubic-bezier(0.4, 0, 1, 1);
+  --ease-out: cubic-bezier(0, 0, 0.2, 1);
+  --ease-elastic: cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  
+  /* Shadow System - Enhanced for better depth perception
+  ------------------------------- */
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  
+  /* Focus System - For better keyboard accessibility
+  ------------------------------- */
+  --focus-ring-width: 2px;
+  --focus-ring-offset: 2px;
+  --focus-ring-color: var(--primary-blue);
+  
+  /* Z-index System - Consistent stacking contexts
+  ------------------------------- */
+  --z-index-negative: -1;
+  --z-index-default: 0;
+  --z-index-dropdown: 10;
+  --z-index-sticky: 20;
+  --z-index-fixed: 30;
+  --z-index-modal: 40;
+  --z-index-popover: 50;
+  --z-index-toast: 60;
+  --z-index-tooltip: 70;
+}
+
+/* Enhanced Focus Styles for Accessibility
+-------------------------------------------------------------- */
+.focus-ring {
+  position: relative;
+}
+
+.focus-ring:focus {
+  outline: none;
+}
+
+.focus-ring:focus-visible {
+  outline: none;
+}
+
+.focus-ring:focus-visible::after {
+  content: '';
+  position: absolute;
+  top: calc(-1 * var(--focus-ring-offset));
+  left: calc(-1 * var(--focus-ring-offset));
+  right: calc(-1 * var(--focus-ring-offset));
+  bottom: calc(-1 * var(--focus-ring-offset));
+  box-shadow: 0 0 0 var(--focus-ring-width) var(--focus-ring-color);
+  border-radius: calc(var(--border-radius-sm) + var(--focus-ring-offset));
+  pointer-events: none;
+}
+
+/* Skip Link - For Keyboard Users to Bypass Navigation
+-------------------------------------------------------------- */
+.skip-to-content {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  background-color: var(--white);
+  color: var(--primary-blue);
+  padding: var(--spacing-md);
+  z-index: var(--z-index-toast);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.skip-to-content:focus {
+  top: var(--spacing-xs);
+  left: var(--spacing-xs);
+  width: auto;
+  height: auto;
+  outline: none;
+  border-radius: var(--border-radius-sm);
+  box-shadow: var(--shadow-md);
+}
+
+/* Enhanced Interactive States
+-------------------------------------------------------------- */
+.interactive-hover {
+  transition: transform var(--transition-fast) var(--ease-out),
+              box-shadow var(--transition-fast) var(--ease-out);
+}
+
+.interactive-hover:hover,
+.interactive-hover:focus-visible {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.interactive-active:active {
+  transform: translateY(1px);
+}
+
+/* Loading Skeletons
+-------------------------------------------------------------- */
+.skeleton {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--light-gray);
+  border-radius: var(--border-radius-sm);
+}
+
+.skeleton::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.5) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  animation: skeleton-loading 1.5s infinite;
+}
+
+@keyframes skeleton-loading {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* Responsive Screen Hiding Utilities
+-------------------------------------------------------------- */
+@media (max-width: 576px) {
+  .hide-xs {
+    display: none !important;
+  }
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+  .hide-sm {
+    display: none !important;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+  .hide-md {
+    display: none !important;
+  }
+}
+
+@media (min-width: 993px) and (max-width: 1200px) {
+  .hide-lg {
+    display: none !important;
+  }
+}
+
+@media (min-width: 1201px) {
+  .hide-xl {
+    display: none !important;
+  }
+}
+
+/* "Only" Variants - Only show on specific breakpoint range */
+@media (min-width: 577px) {
+  .xs-only {
+    display: none !important;
+  }
+}
+
+@media (max-width: 576px), (min-width: 769px) {
+  .sm-only {
+    display: none !important;
+  }
+}
+
+@media (max-width: 768px), (min-width: 993px) {
+  .md-only {
+    display: none !important;
+  }
+}
+
+@media (max-width: 992px), (min-width: 1201px) {
+  .lg-only {
+    display: none !important;
+  }
+}
+
+@media (max-width: 1200px) {
+  .xl-only {
+    display: none !important;
+  }
+}
+
+/* Touch Device Optimizations
+-------------------------------------------------------------- */
+@media (hover: none) {
+  /* Optimize touch targets on mobile */
+  .touch-target {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  /* Add additional padding for touch targets */
+  .touch-padding {
+    padding: var(--spacing-md) !important;
+  }
+}
