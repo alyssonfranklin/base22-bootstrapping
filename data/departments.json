@@ -1,0 +1,152 @@
+[
+  {
+    "id": "hr-department",
+    "title": "Human Resources Department",
+    "shortTitle": "Human Resources",
+    "description": "The Human Resources department at Space Industries International is responsible for managing the employee lifecycle, including recruitment, onboarding, training, performance management, and benefits administration. Our team works to create a positive workplace culture and ensure compliance with employment laws and regulations.",
+    "detailedDescription": "The Human Resources department at Space Industries International is dedicated to supporting our most valuable asset: our people. We provide comprehensive services throughout the employee lifecycle, from talent acquisition and onboarding to professional development and retirement planning.\n\nOur mission is to create a workplace environment where innovation thrives, diversity is celebrated, and every team member has the opportunity to reach their full potential. We achieve this through strategic partnerships with all departments, maintaining open communication channels, and implementing progressive HR policies that reflect our company values.\n\nThe HR department consists of several specialized teams including Talent Acquisition, Learning & Development, Compensation & Benefits, Employee Relations, and HRIS. Together, we work to ensure that Space Industries International remains an employer of choice in the aerospace industry.",
+    "featuredImage": "/images/departments/hr-department.jpg",
+    "lastUpdated": "2025-02-15T10:30:00Z",
+    "commonQuestions": [
+      {
+        "question": "How do I submit a time-off request?",
+        "answer": "Time-off requests should be submitted through the employee portal at least two weeks in advance for planned absences. Navigate to the 'Self Service' section and select 'Time Off' to complete the request form. Your request will be automatically routed to your manager for approval."
+      },
+      {
+        "question": "Where can I find information about benefits enrollment?",
+        "answer": "Benefits information and enrollment options can be found in the 'Benefits' section of the employee portal. During open enrollment periods, you will receive email notifications with specific instructions. For questions about your benefits package, please contact the Benefits team at benefits@spaceindustries.com."
+      },
+      {
+        "question": "How can I update my personal information?",
+        "answer": "You can update your personal information (address, phone number, emergency contacts, etc.) through the 'Personal Info' section of the Self Service portal. Changes to tax withholding, direct deposit, or legal name require additional documentation and should be submitted to HR directly."
+      },
+      {
+        "question": "What training opportunities are available?",
+        "answer": "Space Industries offers a wide range of professional development opportunities through our Learning Management System. Log in to view both required and optional courses for your role. Additionally, you can request external training or conference attendance through the professional development request form in the Learning & Development section."
+      }
+    ],
+    "promotions": [
+      {
+        "title": "Benefits Open Enrollment",
+        "description": "Annual benefits enrollment period is now open until November 15. Review your options and make your selections for the upcoming year."
+      }
+    ],
+    "documents": [
+      {
+        "name": "Employee Handbook 2025",
+        "size": "4.2 MB",
+        "format": "PDF",
+        "url": "/documents/employee-handbook-2025.pdf"
+      },
+      {
+        "name": "Time-Off Policy",
+        "size": "285 KB",
+        "format": "PDF",
+        "url": "/documents/time-off-policy.pdf"
+      },
+      {
+        "name": "Performance Review Guidelines",
+        "size": "1.8 MB",
+        "format": "PDF",
+        "url": "/documents/performance-review-guidelines.pdf"
+      },
+      {
+        "name": "Benefits Summary 2025",
+        "size": "3.1 MB",
+        "format": "PDF",
+        "url": "/documents/benefits-summary-2025.pdf"
+      }
+    ],
+    "supportOptions": [
+      {
+        "title": "Send a Message",
+        "description": "For general HR inquiries, submit a message through our secure portal and receive a response within 24 hours.",
+        "icon": "mail"
+      },
+      {
+        "title": "Contact Support",
+        "description": "For urgent matters, contact the HR support team directly at (555) 123-4567 or hr-support@spaceindustries.com",
+        "icon": "phone"
+      }
+    ],
+    "artemisInfo": {
+      "title": "Artemis I Launch Attempt Scrubbed",
+      "description": "The Artemis I launch attempt scheduled for Monday, August 29 was scrubbed after engineers could not work through an issue identified with one of the rocket's engines. The next launch attempt will be scheduled after reviewing the data. HR will support all team members working on extended shifts during this critical period."
+    }
+  },
+  {
+    "id": "engineering-department",
+    "title": "Engineering Department",
+    "shortTitle": "Engineering",
+    "description": "The Engineering department leads all technical design, development, and implementation of Space Industries' aerospace systems and infrastructure. Our team of engineers works across multiple disciplines to create innovative solutions for space exploration and commercial applications.",
+    "detailedDescription": "The Engineering department at Space Industries International is the driving force behind our technological innovations and groundbreaking aerospace designs. Our team combines cutting-edge research with practical implementation to develop solutions that push the boundaries of what's possible in space exploration and utilization.\n\nOur department comprises several specialized teams including Propulsion Systems, Structural Engineering, Avionics & Control Systems, Materials Science, and Systems Integration. Each team contributes unique expertise while collaborating closely to ensure all components work together seamlessly in the harsh environment of space.\n\nWe follow rigorous design and testing protocols to meet the highest standards of safety and reliability. Our engineering practices incorporate principles of sustainable design and resource efficiency, balancing performance requirements with environmental considerations.",
+    "featuredImage": "/images/departments/engineering-department.jpg",
+    "lastUpdated": "2025-02-10T14:45:00Z",
+    "commonQuestions": [
+      {
+        "question": "How do I request access to the engineering software suite?",
+        "answer": "Access to engineering software is managed through the IT Service Portal. Submit a software access request specifying which applications you need and your project requirements. Approvals are typically processed within 48 hours."
+      },
+      {
+        "question": "What is the process for submitting design reviews?",
+        "answer": "Design reviews should be submitted through the Engineering Portal using the standardized templates. Select the appropriate review type (conceptual, preliminary, critical, or final) and upload all required documentation. The system will automatically notify relevant stakeholders and schedule the review meeting."
+      },
+      {
+        "question": "How do I access the materials testing lab?",
+        "answer": "The materials testing lab requires special clearance due to safety regulations. Complete the lab safety training in the Learning Management System, then submit an access request through your department head. Once approved, your badge will be programmed for lab access."
+      },
+      {
+        "question": "Where can I find engineering standards and specifications?",
+        "answer": "All engineering standards, specifications, and technical references are maintained in the Engineering Knowledge Base. You can search by category, system type, or keyword. If you need standards from external organizations, submit a request through the Technical Library services."
+      }
+    ],
+    "promotions": [
+      {
+        "title": "Technical Fellowship Applications",
+        "description": "Applications for the annual Technical Fellowship Program are now open until April 30. Senior engineers are encouraged to apply for this prestigious opportunity."
+      }
+    ],
+    "documents": [
+      {
+        "name": "Engineering Design Guide",
+        "size": "8.5 MB",
+        "format": "PDF",
+        "url": "/documents/engineering-design-guide.pdf"
+      },
+      {
+        "name": "Materials Specifications",
+        "size": "12.3 MB",
+        "format": "PDF",
+        "url": "/documents/materials-specifications.pdf"
+      },
+      {
+        "name": "Test Protocols Handbook",
+        "size": "5.7 MB",
+        "format": "PDF",
+        "url": "/documents/test-protocols-handbook.pdf"
+      },
+      {
+        "name": "Safety Standards 2025",
+        "size": "4.2 MB",
+        "format": "PDF",
+        "url": "/documents/safety-standards-2025.pdf"
+      }
+    ],
+    "supportOptions": [
+      {
+        "title": "Engineering Help Desk",
+        "description": "For technical assistance, contact the Engineering Help Desk which provides 24/7 support for all engineering systems and applications.",
+        "icon": "tool"
+      },
+      {
+        "title": "Project Support",
+        "description": "Need help with a specific engineering project? Request consultation with a subject matter expert through the Project Support Portal.",
+        "icon": "clipboard"
+      }
+    ],
+    "artemisInfo": {
+      "title": "Artemis I Launch Attempt Scrubbed",
+      "description": "The Artemis I launch attempt scheduled for Monday, August 29 was scrubbed after engineers could not work through an issue identified with one of the rocket's engines. Engineering teams are currently analyzing data to determine the root cause and necessary repairs. A detailed technical briefing will be scheduled once initial analysis is complete."
+    }
+  }
+]

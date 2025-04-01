@@ -6,6 +6,7 @@
 @import './news.css';
 @import './article.css';
 @import './event-detail.css';
+@import './department.css';
 
 /* Mobile Navigation Styles */
 .mobile-menu-overlay {

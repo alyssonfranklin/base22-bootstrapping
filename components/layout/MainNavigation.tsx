@@ -44,7 +44,7 @@ const menuItems: MenuItem[] = [
     title: 'Explore',
     items: [
       { title: 'Company Directory', link: '/explore/directory' },
-      { title: 'Departments', link: '/explore/departments' },
+      { title: 'Departments', link: '/departments' },
       { title: 'Locations', link: '/explore/locations' },
       { title: 'Knowledge Base', link: '/explore/knowledge' },
     ],
