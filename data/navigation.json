@@ -1,0 +1,56 @@
+[
+  {
+    "id": "my-workspace",
+    "title": "My Workspace",
+    "items": [
+      { "title": "Dashboard", "link": "/workspace/dashboard", "icon": "home" },
+      { "title": "Calendar", "link": "/workspace/calendar", "icon": "calendar" },
+      { "title": "Tasks", "link": "/workspace/tasks", "icon": "check-square" },
+      { "title": "Documents", "link": "/workspace/documents", "icon": "file-text" }
+    ]
+  },
+  {
+    "id": "life-career",
+    "title": "Life & Career",
+    "items": [
+      { "title": "Benefits", "link": "/life-career/benefits", "icon": "heart" },
+      { "title": "Training", "link": "/life-career/training", "icon": "book" },
+      { "title": "Development", "link": "/life-career/development", "icon": "trending-up" },
+      { "title": "Well-being", "link": "/life-career/wellbeing", "icon": "smile" },
+      { "title": "Resource Catalog", "link": "/catalog", "icon": "grid" }
+    ]
+  },
+  {
+    "id": "self-service",
+    "title": "Self Service",
+    "items": [
+      { "title": "Time Off", "link": "/self-service/time-off", "icon": "clock" },
+      { "title": "Expenses", "link": "/self-service/expenses", "icon": "dollar-sign" },
+      { "title": "Pay Information", "link": "/self-service/pay", "icon": "credit-card" },
+      { "title": "Personal Info", "link": "/self-service/personal", "icon": "user" }
+    ]
+  },
+  {
+    "id": "explore",
+    "title": "Explore",
+    "items": [
+      { "title": "Resource Directory", "link": "/directory", "icon": "folder" },
+      { "title": "Departments", "link": "/departments", "icon": "users" },
+      { "title": "Locations", "link": "/explore/locations", "icon": "map-pin" },
+      { "title": "Knowledge Base", "link": "/explore/knowledge", "icon": "book-open" }
+    ]
+  },
+  {
+    "id": "news-feed",
+    "title": "News Feed",
+    "link": "/news",
+    "icon": "rss",
+    "items": [
+      { "title": "News Catalog", "link": "/news", "icon": "list" },
+      { "title": "Announcements", "link": "/news/announcements", "icon": "bell" },
+      { "title": "Company Updates", "link": "/news/updates", "icon": "refresh-cw" },
+      { "title": "Events", "link": "/events", "icon": "calendar" },
+      { "title": "Newsletter", "link": "/news/newsletter", "icon": "mail" }
+    ]
+  }
+]
